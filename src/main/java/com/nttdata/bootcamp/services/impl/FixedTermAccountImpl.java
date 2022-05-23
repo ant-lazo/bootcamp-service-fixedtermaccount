@@ -35,4 +35,9 @@ public class FixedTermAccountImpl implements IFixedTermAccountService {
 	public Mono<Void> delete(FixedTermAccount fixedTermAccount) {
 		return ftarepo.delete(fixedTermAccount);
 	}
+
+	@Override
+	public Flux<FixedTermAccount> findByIdCustomerPerson(String idCustomerPerson) {
+		return ftarepo.findByIdCustomerPerson(idCustomerPerson);
+	}
 }

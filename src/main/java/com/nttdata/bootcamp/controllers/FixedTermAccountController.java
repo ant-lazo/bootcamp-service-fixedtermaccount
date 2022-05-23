@@ -57,5 +57,11 @@ public class FixedTermAccountController {
 		log.info("a FixedTermAccount was deleted");
 		return ftarepo.delete(fixedTermAccount);
 	}
+	
+	@GetMapping("/findByIdCustomerPerson/{idCustomerPerson}")
+	public Flux<FixedTermAccount> findAllByIdCustomerPerson(String idCustomerPerson){
+		log.info("all FixedTermAccounts by idCustomerPerson were consulted");
+		return ftarepo.findByIdCustomerPerson(idCustomerPerson);
+	}
 
 }
